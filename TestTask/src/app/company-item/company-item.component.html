@@ -8,10 +8,10 @@
 </div> -->
 
 <div class='company-item' *ngIf="company">
-    <Img src='{{ company.logo }}' width='700px'>
+    <Img class='logo' src='{{ company.logo }}' width='300px' height='100px'>
     <div>Название: {{ company.suffix }} "{{ company.business_name }}"</div>
     <div>Вид деятельности: {{ company.industry }}</div>
     <div>Тип: {{ company.type }}</div>
-    <div> <a routerLink="/map">Местоположение: {{ company.full_address }}</a></div>
+    <div class='to-map'> <a routerLink="/map">Местоположение: {{ company.full_address }}</a></div>
     <div routerLink="/company/{{ company.id }}" class="button">Узнать больше</div>
 </div>

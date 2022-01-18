@@ -5,4 +5,15 @@
     display:grid;
     align-items: center;
     justify-content: center;
+    height: 300px;
+}
+
+.to-map {
+    width:800px;
+}
+
+.logo {
+    outline: 2px solid rgb(119, 118, 118);
+    background-color: rgb(218, 214, 214);
+    border-radius: 2px;
 }
