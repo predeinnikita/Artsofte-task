@@ -1,6 +1,9 @@
-<h2>Products</h2>
+<h2>List of companies:</h2>
+  <mat-list-item class='company-list' *ngFor="let company of companies | async">
+    <app-company-item [company]="company"></app-company-item>
+  </mat-list-item>
 
-<div *ngFor="let product of products">
+<!-- <div *ngFor="let product of products">
 
   <h3>
     <a [title]="product.name + ' details'">
@@ -20,15 +23,4 @@
   [product]="product" 
   (notify)="onNotify()">
 </app-product-alerts>
-</div>
-
-
-<div *ngFor="let company of companies | async">
-
-    <h3>
-      <a>
-        {{ company.business_name }}
-      </a>
-    </h3>
-    <Img src='{{ company.logo }}' width='300px'>
-  </div>
+</div> -->

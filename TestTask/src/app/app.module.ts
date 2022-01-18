@@ -5,26 +5,38 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { CompanyListComponent } from './company-list/company-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LayoutComponent } from './layout/layout.component';
+import { CompanyItemComponent } from './company-item/company-item.component';
+import { MatListModule } from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component'
 
 @NgModule({
   imports: [
     BrowserModule,
+    MatListModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'product/:productId', component: ProductDetailsComponent }
+      { path: '', component: CompanyListComponent },
+      { path: 'list', component: CompanyListComponent },
+      { path: 'company/:companyId', component: ProductDetailsComponent },
+      { path: 'map', component: CompanyYandexMapComponent}
     ]),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
+    CompanyListComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    LayoutComponent,
+    CompanyItemComponent,
+    CompanyYandexMapComponent
   ],
   bootstrap: [
     AppComponent

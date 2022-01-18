@@ -1,0 +1,16 @@
+<!-- <div *ngIf="company">
+<h3>
+    <a>
+    {{ company.business_name }}
+    </a>
+</h3>
+<Img src='{{ company.logo }}' width='400px'>
+</div> -->
+
+<div class='company-item' *ngIf="company">
+    <Img src='{{ company.logo }}' width='300px'>
+    <h1> <a routerLink="/company/{{ company.id }}" >{{ company.suffix }} "{{ company.business_name }}"</a></h1>
+    <h2>{{ company.industry }}</h2>
+    <h3>{{ company.type }}</h3>
+    <div routerLink="/map" class="button fancy-button">Местоположение</div>
+</div>

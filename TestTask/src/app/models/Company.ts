@@ -3,5 +3,6 @@ export interface ICompany {
     business_name: string,
     suffix: string,
     industry: string,
-    logo: string
+    logo: string,
+    type: string;
 }
