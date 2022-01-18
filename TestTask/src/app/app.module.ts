@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CompanyItemComponent } from './company-item/company-item.component';
 import { MatListModule } from '@angular/material/list';
@@ -22,7 +22,7 @@ import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-m
     RouterModule.forRoot([
       { path: '', component: CompanyListComponent },
       { path: 'list', component: CompanyListComponent },
-      { path: 'company/:companyId', component: ProductDetailsComponent },
+      { path: 'company/:companyId', component: CompanyDetailsComponent },
       { path: 'map', component: CompanyYandexMapComponent}
     ]),
     HttpClientModule,
@@ -33,7 +33,7 @@ import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-m
     TopBarComponent,
     CompanyListComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent,
+    CompanyDetailsComponent,
     LayoutComponent,
     CompanyItemComponent,
     CompanyYandexMapComponent

@@ -1,0 +1,12 @@
+<!-- <h2>Company Details {{ id }}</h2> -->
+
+  <div *ngIf="!!company">
+    <Img src='{{ company.logo }}' width='300px'>
+    <h1> {{ company.suffix }} "{{ company.business_name }}"</h1>
+    <h2>{{ company.industry }}</h2>
+    <h3>{{ company.type }}</h3>
+    <h3>{{ company.catch_phrase }}</h3>
+    <h3>{{ company.phone_number }}</h3>
+    <h3>{{ company.full_address }}</h3>
+    <div routerLink="/map" class="button fancy-button">Местоположение</div>
+  </div>
