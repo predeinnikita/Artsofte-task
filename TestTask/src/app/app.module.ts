@@ -12,13 +12,19 @@ import { LayoutComponent } from './layout/layout.component';
 import { CompanyItemComponent } from './company-item/company-item.component';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component'
+import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
+import { CompanySortComponent } from './company-sort/company-sort.component'
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import { CompanyFilterComponent } from './company-filter/company-filter.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     MatListModule,
+    MatSelectModule,
     ReactiveFormsModule,
+    MatButtonModule,
     RouterModule.forRoot([
       { path: '', component: CompanyListComponent },
       { path: 'list', component: CompanyListComponent },
@@ -36,7 +42,9 @@ import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-m
     CompanyDetailsComponent,
     LayoutComponent,
     CompanyItemComponent,
-    CompanyYandexMapComponent
+    CompanyYandexMapComponent,
+    CompanySortComponent,
+    CompanyFilterComponent
   ],
   bootstrap: [
     AppComponent

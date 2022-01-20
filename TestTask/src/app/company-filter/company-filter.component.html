@@ -1,0 +1,12 @@
+
+<div class='search'>
+<input type="text" [formControl]="filterForm" placeholder="Search">
+<mat-form-field appearance="fill">
+    <mat-label>search by</mat-label>
+    <mat-select [(value)]="selected">
+        <mat-option *ngFor="let property of properties" [value]="property.value">
+        {{property.view}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+</div>

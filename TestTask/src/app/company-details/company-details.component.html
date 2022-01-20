@@ -1,12 +1,14 @@
 <!-- <h2>Company Details {{ id }}</h2> -->
 
   <div *ngIf="!!company">
-    <Img src='{{ company.logo }}' width='300px'>
-    <h1>Название: {{ company.suffix }} "{{ company.business_name }}"</h1>
-    <h3>Вид деятельности: {{ company.industry }}</h3>
-    <h3>Тип: {{ company.type }}</h3>
-    <h3>Слоган: {{ company.catch_phrase }}</h3>
-    <h3>Номер телефона: {{ company.phone_number }}</h3>
-    <h3>Адрес: {{ company.full_address }}</h3>
-    <div routerLink="/map" class="button fancy-button">Показать на карте</div>
+    <div class='company-details'>
+      <Img src='{{ company.logo }}' width='300px'>
+      <h1>Название: {{ company.suffix }} "{{ company.business_name }}"</h1>
+      <h3>Вид деятельности: {{ company.industry }}</h3>
+      <h3>Тип: {{ company.type }}</h3>
+      <h3>Слоган: {{ company.catch_phrase }}</h3>
+      <h3>Номер телефона: {{ company.phone_number }}</h3>
+      <h3>Адрес: {{ company.full_address }}</h3>
+      <div routerLink="/map" class="button">Показать на карте</div>
+  </div>
   </div>

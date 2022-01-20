@@ -1,0 +1,13 @@
+<div class='sorting'>
+    <mat-form-field appearance="fill">
+    <mat-label>sort by</mat-label>
+    <mat-select [(value)]="selected">
+        <mat-option (click)="sort()" *ngFor="let criterion of criterions" [value]="criterion.value">
+        {{criterion.view}}
+        </mat-option>
+    </mat-select>
+    </mat-form-field>
+    <!-- <div class="button sort-button" (click)="sort()">
+        sort
+    </div> -->
+</div>

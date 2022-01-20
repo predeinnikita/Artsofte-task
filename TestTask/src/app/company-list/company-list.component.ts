@@ -25,6 +25,7 @@ export class CompanyListComponent implements OnInit {
     this.getCompanies();
   }
 
+
   // ngOnDestroy(){
   //   if (this.subscriber) {
   //       this.subscriber.unsubscribe();

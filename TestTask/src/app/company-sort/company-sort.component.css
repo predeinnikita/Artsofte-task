@@ -1,0 +1,10 @@
+.sort-button {
+    margin-left: 10px;
+    width: 204px;
+    height: 59.5px;
+    font-size: large;
+}
+
+.sorting {
+    display:flex;
+}
