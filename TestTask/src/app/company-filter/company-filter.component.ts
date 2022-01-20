@@ -19,15 +19,12 @@ export class CompanyFilterComponent implements OnInit {
   }
   
   filterForm!: FormControl;
-
   
   properties: IFilterProperty[] = [
     { value: 'business_name', view: 'name' },
     { value: 'type', view: 'type' },
     { value: 'industry', view: 'industry'}
   ]
-
-
 
   ngOnInit(): void {
     this.filterForm = new FormControl('');
@@ -38,13 +35,13 @@ export class CompanyFilterComponent implements OnInit {
         this.allCompanies = this.companies.slice();
         isFirstChange = false;
       }
-      this.filterCompanies(this.filterForm.value);
+      this.filterCompanies();
     });
   }
 
 
   selected: string = '';
-  private filterCompanies(name: string) {
+  private filterCompanies() {
       this.cleanAll(this.companies);
       this.companies.push(...this.allCompanies);
       this.cleanBy(this.companies, this.selected? this.selected: 'business_name');

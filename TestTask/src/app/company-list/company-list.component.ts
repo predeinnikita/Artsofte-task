@@ -14,7 +14,7 @@ export class CompanyListComponent implements OnInit {
   private companiesService: CompaniesService;
   public companies: ICompany[] = [];
   private subscriber: Subscription | undefined;
-
+  
   constructor(companiesService: CompaniesService) { 
     this.companiesService = companiesService;
   }
