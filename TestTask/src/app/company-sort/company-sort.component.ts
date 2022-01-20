@@ -25,7 +25,7 @@ export class CompanySortComponent implements OnInit {
     this.subscriber = this.companiesService.getCompanies()
       .subscribe((companies)=>{
         companies.sort((a, b) => 
-          a[this.selected as keyof ICompany] > b[this.selected as keyof ICompany] ? 1 : -1);
+          a[this.selected as keyof ICompany] >= b[this.selected as keyof ICompany] ? 1 : -1);
     })
   }
 
