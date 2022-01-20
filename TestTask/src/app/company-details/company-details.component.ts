@@ -4,8 +4,6 @@ import { Observable, Subscriber, Subscription } from 'rxjs';
 import { CompaniesService } from '../companies.service';
 import { ICompany } from '../models/Company';
 
-import { Product, products } from '../products';
-
 @Component({
   selector: 'app-company-details',
   templateUrl: './company-details.component.html',
@@ -28,11 +26,6 @@ export class CompanyDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getCompany()
   }
-  // ngOnDestroy(){
-  //   if (this.subscriber) {
-  //       this.subscriber.unsubscribe()
-  //   }
-  // }
 
   getCompany():void {
     const id = Number(this.route.snapshot.paramMap.get('companyId'));

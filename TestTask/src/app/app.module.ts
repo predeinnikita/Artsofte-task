@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CompanyListComponent } from './company-list/company-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+// import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CompanyItemComponent } from './company-item/company-item.component';
@@ -38,7 +38,6 @@ import { CompanyFilterComponent } from './company-filter/company-filter.componen
     AppComponent,
     TopBarComponent,
     CompanyListComponent,
-    ProductAlertsComponent,
     CompanyDetailsComponent,
     LayoutComponent,
     CompanyItemComponent,

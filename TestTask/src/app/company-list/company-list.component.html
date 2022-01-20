@@ -3,27 +3,6 @@
   <app-company-sort [companies]="companies"></app-company-sort>
   <div class='search'><app-company-filter [companies]="companies"></app-company-filter></div>
 </div>
-  <mat-list-item class='company-list' *ngFor="let company of companies">
-    <app-company-item [company]="company"></app-company-item>
-  </mat-list-item>
-<!-- <div *ngFor="let product of products">
-
-  <h3>
-    <a [title]="product.name + ' details'">
-      {{ product.name }}
-    </a>
-  </h3>
-
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-
-  <button (click)="share()">
-    Share
-  </button>
-
-  <app-product-alerts
-  [product]="product" 
-  (notify)="onNotify()">
-</app-product-alerts>
-</div> -->
+<mat-list-item class='company-list' *ngFor="let company of companies">
+  <app-company-item [company]="company"></app-company-item>
+</mat-list-item>

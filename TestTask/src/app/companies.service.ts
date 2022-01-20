@@ -7,6 +7,7 @@ import { ICompany } from './models/Company';
   providedIn: 'root'
 })
 export class CompaniesService {
+  [x: string]: any;
   
   public companies: ICompany[] = [];
 
@@ -20,7 +21,7 @@ export class CompaniesService {
   }
 
   public fetchData(){ 
-    this.httpClient.get<ICompany[]>(this.url).pipe(catchError(this.handleError))
+    this.httpClient.get<ICompany[]>(this.url)//.pipe(catchError(this.handleError))
       .subscribe(companies => {
           this.companies = companies;
           //При получении данных сразу отправляем их подписчику, если он есть
@@ -31,10 +32,10 @@ export class CompaniesService {
       )
   }
 
-  public handleError(error: HttpErrorResponse){ 
-    console.error(error.message);
-    return []
-  }
+  // public handleError(error: HttpErrorResponse){ 
+  //   console.error(error.message);
+  //   return []
+  // }
 
   public getCompany(id: number): Observable<ICompany> {
     let company = this.companies.find(company => company.id === id)!;

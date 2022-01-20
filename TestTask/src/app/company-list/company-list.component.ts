@@ -4,8 +4,6 @@ import { CompaniesService } from '../companies.service';
 import { ICompany } from '../models/Company';
 import { MatListItem, MatListModule } from '@angular/material/list'
 
-import { products } from '../products';
-
 @Component({
   selector: 'app-company-list',
   templateUrl: './company-list.component.html',
@@ -25,18 +23,10 @@ export class CompanyListComponent implements OnInit {
     this.getCompanies();
   }
 
-
-  // ngOnDestroy(){
-  //   if (this.subscriber) {
-  //       this.subscriber.unsubscribe();
-  //   }
-  // }
-
   getCompanies(){
     this.subscriber = this.companiesService.getCompanies()
       .subscribe((companies)=>{
             this.companies = companies;
-
       });
   }
 }
