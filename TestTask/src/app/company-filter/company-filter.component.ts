@@ -42,7 +42,7 @@ export class CompanyFilterComponent implements OnInit {
 
   selected: string = '';
   private filterCompanies() {
-      this.cleanAll(this.companies);
+      this.companies.splice(0);
       this.companies.push(...this.allCompanies);
       this.cleanBy(this.companies, this.selected? this.selected: 'business_name');
   }
@@ -53,13 +53,6 @@ export class CompanyFilterComponent implements OnInit {
         array.splice(i, 1);
         i -= 1;
       }
-    } 
-  }
-
-  private cleanAll(array: any[]) {
-    for (let i = 0; i < array.length; i++){
-        array.splice(i, 1);
-        i -= 1;
     } 
   }
 }
